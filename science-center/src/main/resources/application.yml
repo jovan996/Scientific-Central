@@ -1,0 +1,60 @@
+#Camunda
+camunda.bpm:
+  database:
+      type: mysql 
+  admin-user:
+    id: demo
+    password: demo
+    firstName: Demo
+    lastName: Demo
+    email: admin@gmail.com
+    
+  filter:
+    create: All tasks
+
+#Spring DataSource
+spring:
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/science_central?createDatabaseIfNotExist=true&useSSL=false 
+    username: root
+    password: root
+    initialization-mode: always  
+    sql-script-encoding: UTF-8
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  mail:
+    protocol: smtp
+    host: smtp.gmail.com
+    port: 587
+    username: jovangrgur96@gmail.com
+    password: najboljiusvemu1
+    properties:
+      mail:
+        smtp:
+          ssl:
+            trust: smtp.gmail.com 
+          auth: true
+          starttls:
+            enable: true
+        
+server:
+  port: 8081
+  #ssl:
+   # enabled: true
+   # key-store: classpath:science_center_keyStore.jks
+    #key-store-password: password
+   # key-alias: science-center
+    #key-store-type: JKS
+    #trust-store: classpath:science_center_trustedStore.jks
+    #trust-store-password: password
+    #trust-store-type: JKS
+  

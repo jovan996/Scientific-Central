@@ -1,0 +1,8 @@
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('src\assets\img\aaron-burden-NN3bYSPU2tQ-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
